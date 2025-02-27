@@ -152,15 +152,6 @@ const RegistrationComponent = () => {
             Sign up with Google
           </motion.button>
         </form>
-
-        {/* Background Image/Illustration (You can replace with actual image) */}
-        <div className="absolute inset-0 -z-10 opacity-50">
-          <img
-            src="/path-to-your-image.jpg" // Replace with your image path
-            alt="Trading background"
-            className="w-full h-full object-cover"
-          />
-        </div>
       </motion.div>
     </div>
   );

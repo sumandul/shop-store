@@ -76,6 +76,8 @@ const BrandLogo = () => {
             >
               <Image
                 src={logo}
+                width={100}
+                height={100}
                 alt={`Brand ${index + 1}`}
                 className="w-full h-full object-contain filter grayscale contrast-125 hover:filter-none"
               />

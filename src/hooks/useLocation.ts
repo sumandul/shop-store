@@ -16,7 +16,7 @@ const useLocation = () => {
           setError(null);
           console.log(`Latitude: ${latitude}, Longitude: ${longitude}`); // Log the position
         },
-        (err) => {
+        () => {
           setError("Location access denied.");
         },
         { enableHighAccuracy: true, maximumAge: 10000 }

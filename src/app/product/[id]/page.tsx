@@ -2,7 +2,6 @@
 // import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
 // Sample product data (replace with actual data fetching or props)
 const product = {
   name: "Air Jordan 6 G × Eastside",
@@ -277,12 +276,12 @@ export default function ProductDetailPage() {
           </div>
           <div className="mt-4">
             <p className="text-gray-600 italic">
-              "I’ve always wanted a pair like this, absolutely my favorite shoes
-              anytime I put them on." - Alexander Stewart
+              I’ve always wanted a pair like this, absolutely my favorite shoes
+              anytime I put them on. - Alexander Stewart
             </p>
             <p className="text-gray-600 italic mt-2">
-              "Great quality and fits perfectly, I’m very happy with my
-              purchase." - Samuel Douglas
+              Great quality and fits perfectly, I’m very happy with my purchase
+              - Samuel Douglas
             </p>
           </div>
         </motion.div>
@@ -307,6 +306,8 @@ export default function ProductDetailPage() {
                 className="bg-gray-50 rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow"
               >
                 <Image
+                  width={100}
+                  height={100}
                   src={item.image}
                   alt={item.name}
                   className="w-full h-48 object-contain rounded-md"

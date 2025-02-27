@@ -1,7 +1,19 @@
+import { Image } from "@heroui/react";
 import { motion } from "framer-motion";
 import { Heart, Star } from "lucide-react";
+import Link from "next/link";
+import { FC } from "react";
 
-const Card = ({ shoe }) => {
+interface Shoe {
+  name: string;
+  price: string;
+  rating: number;
+  sold: number;
+  image: string;
+  tag?: string;
+}
+
+const Card: FC<{ shoe: Shoe }> = ({ shoe }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -20,7 +32,9 @@ const Card = ({ shoe }) => {
       <button className="absolute top-2 right-2 text-gray-500 hover:text-red-500">
         <Heart size={20} />
       </button>
-      <img
+      <Image
+        width={100}
+        height={100}
         src={shoe.image}
         alt={shoe.name}
         className="w-full h-40 object-contain"
@@ -114,7 +128,9 @@ export default function ShoesGrid() {
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {shoes.map((shoe, index) => (
-          <Card key={index} shoe={shoe} />
+          <Link key={index} href={"/product/3"}>
+            <Card shoe={shoe} />
+          </Link>
         ))}
       </div>
     </div>
